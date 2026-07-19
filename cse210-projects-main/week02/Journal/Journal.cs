@@ -1,37 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text.Json; // Used to cleanly fulfill the creative stretch goals
-
-public class Journal
-{
-    // List to hold the entries
-    public List<Entry> _entries = new List<Entry>();
-
-    // Adds a new entry to the journal
-    public void AddEntry(Entry newEntry)
-    {
-        _entries.Add(newEntry);
-    }
-
-    // Displays all the entries in the journal
-    public void DisplayAll()
-    {
-        if (_entries.Count == 0)
-        {
-            Console.WriteLine("\nYour journal is currently empty.");
-            return;
-        }
-
-        Console.WriteLine("\n=== JOURNAL ENTRIES ===");
-        foreach (Entry entry in _entries)
-        {
-            entry.Display();
-        }
-    }
-
-    // Saves the journal to a file using structured JSON
-    public void SaveToFile(string file)
+public void SaveToFile(string file)
 {
     try
     {
@@ -90,5 +57,4 @@ public void LoadFromFile(string file)
     {
         Console.WriteLine($"Error loading from file: {ex.Message}");
     }
-}
 }

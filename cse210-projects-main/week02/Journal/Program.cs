@@ -1,12 +1,15 @@
 using System;
 
-/* 
-  CREATIVITY / EXCEEDING REQUIREMENTS:
-  1. Implemented advanced error handling blocks (try-catch validation structures) in the Journal 
-     saving/loading systems to prevent application crashes from corrupted files or missing paths.
-  2. Integrated proactive file-existence checks (!File.Exists) that cleanly warn the user with 
-     clear terminal notifications instead of throwing unhandled systems exceptions.
+/*
+==================================================================================
+CREATIVITY AND EXCEEDING REQUIREMENTS REPORT:
+1. Integrated System.Text.Json format for saving and loading. Standard text and CSV
+   files break easily if users type commas, quotes, or line breaks inside their entry.
+   By using JSON serialization, the program safely saves any complex text characters.
+2. Formatted user interface with clean visual dividers and clear input menus.
+==================================================================================
 */
+
 class Program
 {
     static void Main(string[] args)
